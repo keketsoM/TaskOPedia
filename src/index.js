@@ -1,79 +1,26 @@
 import ReactDOM from 'react-dom/client';
 import "./CSS/style.css";
+import Footer from './Layout/Footer';
+import Header from './Layout/Header';
+import MainBody from './Layout/Mainbody';
+import Students from './Layout/Student';
+
 const root=ReactDOM.createRoot(document.getElementById("root"));
-function Header(){
-  return(
-    <div>
-<h1 className='heading1'>React Course</h1>
-<Subhearding></Subhearding>
-    </div>
-    
-  );
-}
-function Subhearding(){
-  return(
-    <p style={headerStyle}>This will be an exciting course.</p>
-  );
-}
-const headerStyle={
-color:'red', 
-backgroundColor:'pink'
-}
-function Students(){
-  const name = "Kris Walley ";
-  const programmingExperince = 2;
-  return(
-   <div className='container p-4'>
-    <div className="row">
-      Students Enrolled
-    </div>
-   <div className='row border'>
-       <div className='col-2'>
-      <img src='https://ui-avatars.com/api/?name=John+Doehttps://ui-avatars.com/api/?name=John+Doe'></img>
- 
-    </div>
-    <div className='col-10'>
-      {name}<br/>
-      <p>Programming Experince : {programmingExperince}</p>
-    </div>
-   </div>
-   </div>
-  );
-}
-function Footer()
-{
-  return(
-    <p style={{color:'grey', 
-      backgroundColor:'black'}}>Happy Coding!</p>
-  );
-}
-function MainBody(){
-  const whatWillLearn ="React Js";
-  const totalLecture =3;
-  return(
-    <div>
-    <p>In this course, we will learn {whatWillLearn} by building TaskOPedia!</p>
-    <p>Total lecture: {totalLecture}</p>
-    <ul>
-      <li>Basic Foundation</li>
-      <li>Functional and Class Components</li>
-    </ul>
-    {/*<div>
-      <label>Enter task :</label>
-      <input maxLength={8} readOnly={false} placeholder='Ben'></input>
-    </div>*/}
-    
-  </div>
 
-  );
 
-}
+
 
 root.render(
-  <div>
+  <div style={{backgroundColor:"black", color:"gray"}}>
 <Header/>
 <MainBody/>
-<Students/>
+<div className="container row">
+        Students Enrolled
+      </div>
+<Students programmingExperince = {2} fullName = "Kris Walley" headshot = "https://drive.google.com/file/d/1M4SusFwLgUHZ-e9thOVRtclFovK7fLD8/view?usp=drive_link" />
+<Students programmingExperince = {1} fullName = "Keke Mollo" headshot = "https://api.lorem.space/image/face?w=150&h=152" />
+<Students programmingExperince = {4} fullName = "Kat Melley" headshot = "https://api.lorem.space/image/face?w=150&h=154" />
+
 <Footer/>
   </div>
  
