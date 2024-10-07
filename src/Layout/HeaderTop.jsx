@@ -1,5 +1,5 @@
 import logo from "../Images/logo192.png";
-function Header(){
+const HeaderTop=()=>{
     return(
       <div>
            <MainHeader></MainHeader>
@@ -18,11 +18,11 @@ function Header(){
   }
   function SubHeading(){
     return(
-      <p style={headerStyle}>This will be an exciting course.</p>
+      <p style={headerStyle} className="text-center">This will be an exciting course.</p>
     );
   }
   const headerStyle={
-  color:'red', 
-  backgroundColor:'pink'
+  color:'blueviolet', 
+  backgroundColor:'lightgray'
   }
-  export default Header;
+  export default HeaderTop;

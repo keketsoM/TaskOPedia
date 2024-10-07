@@ -1,4 +1,4 @@
-export default function Footer()
+const Footer =()=>
 {
   return(
     <p style={{color:'grey', 
@@ -10,3 +10,4 @@ export default function Footer()
       >Happy Coding!</p>
   );
 }
+export default Footer;
